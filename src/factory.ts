@@ -8,7 +8,7 @@ let canvasArr: string[] = [];
 let width: number;
 let color = 'x';
 
-const converToString = (arr: string[], index: number) => {
+export const converToString = (arr: string[], index: number) => {
     let checkCanvas = arr.join('');
     for (let i = 0; i < 6; i++) {
         checkCanvas = [checkCanvas.slice(0, index), '\n', checkCanvas.slice(index)].join('');
