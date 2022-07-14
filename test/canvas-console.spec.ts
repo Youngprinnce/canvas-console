@@ -36,5 +36,14 @@ describe("drawing the canvas", function() {
             expect(canvas[(totalWidth * 2) + 8]).to.eql('x');
             expect(canvas[(totalWidth * 2) + 9]).to.eql(' ');
         })
+        it("draw a vertical line", function () {
+            drawLine.line(1, 2, 6, 2, canvasArr, totalWidth);
+            drawLine.line(6, 3, 6, 4, canvasArr, totalWidth);
+            canvas = factory.converToString(canvasArr, totalWidth);
+
+            expect(canvas[(totalWidth * 3) + 8]).to.eql(' ');
+            expect(canvas[(totalWidth * 3) + 9]).to.eql('x');
+            expect(canvas[(totalWidth * 3) + 10]).to.eql(' ');
+        })
     })
 })
