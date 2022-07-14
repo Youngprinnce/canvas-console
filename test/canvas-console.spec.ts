@@ -72,4 +72,18 @@ describe("drawing the canvas", function() {
             expect(canvas[(totalWidth * 3) + 22]).to.eql(' ');
         })
     })
+
+    describe('fill the canvas', function() {
+        it("fills the canvas with o", function () {
+            fillCanvas.fill(10, 3, 'o', canvasArr, totalWidth);
+
+            canvas = factory.converToString(canvasArr, totalWidth);
+
+            expect(canvas[totalWidth + 2]).to.eql('o');
+            expect(canvas[totalWidth + 14]).to.eql('o');
+            expect(canvas[totalWidth + 15]).to.eql('x');
+            expect(canvas[(totalWidth * 2) + 16]).to.eql('x');
+            expect(canvas[(totalWidth * 2) + 17]).to.eql(' ');
+        })
+    })
 })
