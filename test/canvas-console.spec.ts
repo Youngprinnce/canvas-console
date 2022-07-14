@@ -25,4 +25,16 @@ describe("drawing the canvas", function() {
             expect(canvas[areaLength]).to.eql('-');
         })
     })
+
+    describe("drawing the line", function() {
+        it("draws a horizontal line", function () {
+            drawLine.line(1, 2, 6, 2, canvasArr, totalWidth);
+            canvas = factory.converToString(canvasArr, totalWidth);
+
+            expect(canvas[(totalWidth * 2) + 2]).to.eql('|');
+            expect(canvas[(totalWidth * 2) + 3]).to.eql('x');
+            expect(canvas[(totalWidth * 2) + 8]).to.eql('x');
+            expect(canvas[(totalWidth * 2) + 9]).to.eql(' ');
+        })
+    })
 })
