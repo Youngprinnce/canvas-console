@@ -46,4 +46,30 @@ describe("drawing the canvas", function() {
             expect(canvas[(totalWidth * 3) + 10]).to.eql(' ');
         })
     })
+
+    describe("drawing the rectangle", function() {
+        it("draws a rectangle", function () {
+            drawRectangle.rectangle(14, 1, 18, 3, canvasArr, totalWidth);
+            canvas = factory.converToString(canvasArr, totalWidth);
+            expect(canvas[totalWidth + 14]).to.eql(' ');
+            expect(canvas[totalWidth + 15]).to.eql('x');
+            expect(canvas[totalWidth + 16]).to.eql('x');
+            expect(canvas[totalWidth + 17]).to.eql('x');
+            expect(canvas[totalWidth + 18]).to.eql('x');
+            expect(canvas[totalWidth + 19]).to.eql('x');
+            expect(canvas[totalWidth + 20]).to.eql(' ');
+
+            expect(canvas[(totalWidth * 2) + 15]).to.eql(' ');
+            expect(canvas[(totalWidth * 2) + 16]).to.eql('x');
+            expect(canvas[(totalWidth * 2) + 17]).to.eql(' ');
+            expect(canvas[(totalWidth * 2) + 19]).to.eql(' ');
+            expect(canvas[(totalWidth * 2) + 20]).to.eql('x');
+            expect(canvas[(totalWidth * 2) + 21]).to.eql(' ');
+
+            expect(canvas[(totalWidth * 3) + 16]).to.eql(' ');
+            expect(canvas[(totalWidth * 3) + 17]).to.eql('x');
+            expect(canvas[(totalWidth * 3) + 21]).to.eql('x');
+            expect(canvas[(totalWidth * 3) + 22]).to.eql(' ');
+        })
+    })
 })
