@@ -24,7 +24,7 @@ export const drawCanvas = (w:number, h:number) => {
         for (let i = 0; i < h; i++) {
             canvasArr.push(yAxis); 
             for (let j = 0; j < w; j++) {
-                canvasArr.push(0);
+                canvasArr.push('0');
             }
             canvasArr.push(yAxis); 
         }

@@ -3,11 +3,11 @@ import * as drawLine from './draw-line';
 import * as drawRectangle from './draw-rectangle';
 
 let canvas: string;
-let canvasArr: (string | number)[] = [];
+let canvasArr: string[] = [];
 let width: number;
 let color = 'x';
 
-const converToString = (arr: (string | number)[], index: number) => {
+const converToString = (arr: string[], index: number) => {
     let checkCanvas = arr.join('');
     for (let i = 0; i < 6; i++) {
         checkCanvas = [checkCanvas.slice(0, index), '\n', checkCanvas.slice(index)].join('');

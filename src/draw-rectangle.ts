@@ -1,4 +1,4 @@
-export const rectangle = (x1:number, y1:number, x2:number, y2:number, canvasArr: (string|number)[], width:number) => {
+export const rectangle = (x1:number, y1:number, x2:number, y2:number, canvasArr: string[], width:number) => {
     let x = x2 - x1;
     let y = y2 - y1;
     let xLine = x1;
