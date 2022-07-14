@@ -1,4 +1,3 @@
-
 export const drawCanvas = (w:number, h:number) => {
     const xAxis = '-';
     const yAxis = '|';
