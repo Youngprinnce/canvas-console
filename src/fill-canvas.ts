@@ -1,6 +1,6 @@
 export const fill = (x:number, y:number, newColor:string, canvasArr:string[], width:number) => {
     const currentPixel = (y * width)+ x;
-    const current:string = canvasArr[currentPixel];
+    const current = canvasArr[currentPixel];
     try {
         if(current === newColor){
             return canvasArr;

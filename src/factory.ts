@@ -1,6 +1,7 @@
 import * as createCanvas from './create-canvas';
 import * as drawLine from './draw-line';
 import * as drawRectangle from './draw-rectangle';
+import * as fillCanvas from './fill-canvas';
 
 let canvas: string;
 let canvasArr: string[] = [];
@@ -52,6 +53,15 @@ export const runCommands = (values: string) => {
         } else if (canvasValues[0] === 'C' && canvasArr) {
             color = canvasValues[1];
             console.log(canvas);
+        } else if (canvasValues[0] === 'B' && canvasArr) {
+            const x = Number(canvasValues[1]);
+            const y = Number(canvasValues[2]);
+            const c = color;
+
+            canvasArr = fillCanvas.fill(x, y, c, canvasArr, width);
+            canvas = converToString(canvasArr, width);
+            console.log(canvas);
+            return;
         }
     } catch(err) {
         throw new Error('Unable to draw canvas!');
