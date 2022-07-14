@@ -45,3 +45,7 @@ Q               Quit.
 
 *   Paint fill algorithm taken from the following blog:
 *   [https://learnersbucket.com/examples/algorithms/flood-fill-algorithm-in-javascript/](https://learnersbucket.com/examples/algorithms/flood-fill-algorithm-in-javascript/)
+
+### Improvements
+*   More tests coverage
+*   Object oriented approach
