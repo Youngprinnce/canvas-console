@@ -1,5 +1,6 @@
 import * as createCanvas from './create-canvas';
 import * as drawLine from './draw-line';
+import * as drawRectangle from './draw-rectangle';
 
 let canvas: string;
 let canvasArr: (string | number)[] = [];
@@ -34,6 +35,16 @@ export const runCommands = (values: string) => {
             const y2 = Number(canvasValues[4]);
 
             canvasArr = drawLine.line(x1, y1, x2, y2, canvasArr, width);
+            canvas = converToString(canvasArr, width);
+            console.log(canvas);
+            return;
+        } else if (canvasValues[0] === 'R' && canvasArr) {
+            const x1 = Number(canvasValues[1]);
+            const y1 = Number(canvasValues[2]);
+            const x2 = Number(canvasValues[3]);
+            const y2 = Number(canvasValues[4]);
+
+            canvasArr = drawRectangle.rectangle(x1, y1, x2, y2, canvasArr, width);
             canvas = converToString(canvasArr, width);
             console.log(canvas);
             return;
