@@ -5,6 +5,7 @@ import * as drawRectangle from './draw-rectangle';
 let canvas: string;
 let canvasArr: (string | number)[] = [];
 let width: number;
+let color = 'x';
 
 const converToString = (arr: (string | number)[], index: number) => {
     let checkCanvas = arr.join('');
@@ -48,6 +49,9 @@ export const runCommands = (values: string) => {
             canvas = converToString(canvasArr, width);
             console.log(canvas);
             return;
+        } else if (canvasValues[0] === 'C' && canvasArr) {
+            color = canvasValues[1];
+            console.log(canvas);
         }
     } catch(err) {
         throw new Error('Unable to draw canvas!');
